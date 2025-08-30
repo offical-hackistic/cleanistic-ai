@@ -72,7 +72,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>San Francisco, CA</span>
+                <span>Jonesboro AR</span>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export const Footer = () => {
 
           {/* Company */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">From the Brain of Hackistic</h4>
+            <h4 className="text-lg font-semibold">Company</h4>
             <div className="space-y-2 text-sm">
               <a href="#" className="block text-muted-foreground hover:text-primary transition-colors">About Us</a>
               <a href="#" className="block text-muted-foreground hover:text-primary transition-colors">Blog</a>
@@ -117,7 +117,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © 2025 Cleanistic AI. All rights reserved.
+            © 2025 Cleanistic AI. All rights reserved. Built by Hackistic
           </div>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
