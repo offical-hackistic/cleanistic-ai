@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Upload, Camera, Calculator, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-ai-analysis.jpg";
+import { useAuth } from "@/contexts/AuthContext";
 
 export const Hero = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
 
   const handleDemo = () => {
     setIsAnalyzing(true);
@@ -44,8 +47,12 @@ export const Hero = () => {
               <Camera className="mr-2 h-5 w-5" />
               Try Live Demo
             </Button>
-            <Button variant="ai" size="lg">
-              View Integration
+            <Button
+              variant="ai"
+              size="lg"
+              onClick={() => navigate(isAuthenticated ? '/dashboard' : '/login')}
+            >
+              {isAuthenticated ? 'Go to Dashboard' : 'Get Started'}
             </Button>
           </div>
 
