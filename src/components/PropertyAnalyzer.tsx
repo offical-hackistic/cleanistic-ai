@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Upload, Camera, MapPin, Calculator, CheckCircle, X, Eye, Home } from 'lucide-react';
 import { apiService } from '@/services/api';
 import { PropertyAnalysis } from '@/types/api';
+import { QuoteGenerator } from '@/components/QuoteGenerator';
 import { toast } from 'sonner';
 
 interface PropertyAnalyzerProps {
