@@ -229,9 +229,7 @@ export const PropertyAnalyzer: React.FC<PropertyAnalyzerProps> = ({
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <Button size="lg" className="w-full">
-              Generate Quote
-            </Button>
+            <QuoteGenerator analysis={analysis} />
             <Button variant="outline" size="lg" className="w-full">
               Download Report
             </Button>
