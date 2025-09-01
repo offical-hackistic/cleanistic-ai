@@ -4,13 +4,14 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { PropertyAnalyzer } from '@/components/PropertyAnalyzer';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
+import { AdminPanel } from '@/components/AdminPanel';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
   ResponsiveContainer,
   PieChart,
   Pie,
@@ -127,11 +128,12 @@ export default function Dashboard() {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="grid w-full grid-cols-4 lg:w-auto lg:grid-cols-4">
+          <TabsList className="grid w-full grid-cols-5 lg:w-auto lg:grid-cols-5">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="analyzer">New Analysis</TabsTrigger>
             <TabsTrigger value="analyses">Analyses</TabsTrigger>
             <TabsTrigger value="quotes">Quotes</TabsTrigger>
+            <TabsTrigger value="admin">Admin</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
@@ -360,6 +362,10 @@ export default function Dashboard() {
                 </Card>
               ))}
             </div>
+          </TabsContent>
+
+          <TabsContent value="admin">
+            <AdminPanel />
           </TabsContent>
         </Tabs>
       </div>
