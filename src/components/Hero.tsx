@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Upload, Camera, Calculator, CheckCircle } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import { AICircuitBackground } from "./AICircuitBackground";
 
 export const Hero = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -21,9 +22,10 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-      {/* Animated background */}
+      {/* Animated AI Circuit Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(217_91%_60%_/_0.1),transparent)] animate-pulse" />
+      <AICircuitBackground />
       
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Content */}
